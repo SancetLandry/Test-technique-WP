@@ -1,0 +1,22 @@
+.search-container {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-input {
+  width: 100%;
+  padding: 0.5em 2em 0.5em 0.5em;
+  border-radius: 0.8em;
+  font-size: 16px;
+  background-color: #3A3F47;
+  border: none;
+  color: white;
+}
+
+.search-icon {
+  position: absolute;
+  right: 0.8em;
+  font-size: 20px;
+  color: #888;
+}

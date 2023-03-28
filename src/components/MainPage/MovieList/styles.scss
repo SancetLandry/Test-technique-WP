@@ -1,0 +1,42 @@
+.movie-list-container {
+  overflow-x: scroll;
+  overflow-y: hidden;
+  white-space: nowrap;
+  padding: 0em 1em 0em 1em;
+  width: auto;
+  height: 44vh;
+}
+
+.movie-list {
+  list-style: none;
+  padding: 0;
+  margin: 0;
+  display: inline-block;
+}
+
+.movie-item {
+  display: inline-block;
+  margin-right: 1.5em;
+  position: relative;
+}
+
+.movie-item img {
+  width: 6em; 
+  height: auto;
+}
+
+.movie-number {
+  position: absolute;
+  bottom: -0.2em;
+  left: -0.1em; 
+  font-size: 5em;
+  font-family: 'Montserrat';
+  font-weight: 700;
+  color: #242A32;
+  text-shadow: 1px 1px 1px rgba(0, 0, 0, 0.5);
+  text-shadow: 
+  -1px -1px 0 #0296e5a1,
+  0.5px -1px 0 #0296e5a1, 
+  -1px 0.5px 0 #0296e5a1, 
+  0.5px 0.5px 0 #0296e5a1;
+}

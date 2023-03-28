@@ -2,6 +2,7 @@
 import { useEffect, useState } from 'react';
 import './styles.scss';
 import SplashScreen from 'src/components/SplashScreen';
+import MainPage from 'src/components/MainPage';
 
 // == Composant
 function App() {
@@ -23,7 +24,7 @@ function App() {
   return (
     <div className="App">
       {showSplashScreen && <SplashScreen />}
-      {/* homepage */}
+      <MainPage />
     </div>
   );
 }
