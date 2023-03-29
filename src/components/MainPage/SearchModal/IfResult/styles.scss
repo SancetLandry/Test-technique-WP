@@ -1,0 +1,59 @@
+.ifResult {
+  overflow-x: scroll;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    gap: 1em;
+  }
+
+
+  &__thumbnail {
+    width: 4em;
+    height: auto;
+    border-radius: 1em;
+  }
+
+  &__rightText {
+
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    padding-top: 0.5em;
+
+    &__iconText {
+      display: flex;
+      flex-direction: row;
+      gap: 0.3em;
+
+      &__container {
+        display: flex;
+        flex-direction: column;
+        gap: 0.3em;
+      }
+
+    }
+
+    &__h1 {
+      font-size: 0.6em;
+      color: white;
+      line-height: 1.3em;
+    }
+
+    &__icon {
+      width: 0.6em;
+      height: auto;
+    }
+
+    &__p {
+      font-size: 0.6em;
+      color: white;
+    }
+  }
+}
+
+
+

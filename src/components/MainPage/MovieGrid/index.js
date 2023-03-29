@@ -57,4 +57,11 @@ MovieGrid.propTypes = {
   ).isRequired,
 };
 
+ValidThumbnail.propTypes = {
+  movie: PropTypes.shape({
+    thumbnail: PropTypes.string.isRequired,
+  }).isRequired,
+  index: PropTypes.number.isRequired,
+};
+
 export default MovieGrid;

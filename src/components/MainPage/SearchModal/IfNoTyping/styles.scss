@@ -1,0 +1,25 @@
+.IfNoTyping {
+  padding-top: 3em;
+  display: flex;
+  flex-direction: column;
+  gap: 1em;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+
+  &__img {
+    width: 6em;
+    height: auto;
+  }
+
+  &__h1 {
+    line-height: 1.5em;
+    font-size: 1em;
+    color: white;
+  }
+
+  &__p {
+    font-size: 0.8em;
+    color: white;
+  }
+}
