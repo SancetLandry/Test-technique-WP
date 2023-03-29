@@ -1,28 +1,36 @@
 // MovieList.js
 import './styles.scss';
-import movie1 from './movie1.png';
+import PropTypes from 'prop-types';
 
-function MovieList() {
-  // Remplacez les URLs par les images de vos films
-  const movieImages = [
-    { movie1 },
-    { movie1 },
-    { movie1 },
-    { movie1 },
-  ];
+function MovieList(props) {
+  const { movies } = props;
+
+  // We sort the movies by year
+  const sortedMovies = movies.sort((a, b) => b.year - a.year);
+
+  // We slice the array to get the 4 most recent movies
+  const recentMovies = sortedMovies.slice(0, 4);
 
   return (
     <div className="movie-list-container">
       <ul className="movie-list">
-        {movieImages.map((image, index) => (
-          <li key={index} className="movie-item">
+        {recentMovies.map((movie, index) => (
+          <li key={`Movie ${index + 1}`} className="movie-item">
             <p className="movie-number">{index + 1}</p>
-            <img src={movie1} alt={`Movie ${index + 1}`} />
+            <img src={movie.thumbnail} alt={`Movie ${index + 1}`} />
           </li>
         ))}
       </ul>
     </div>
   );
 }
+
+MovieList.propTypes = {
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      thumbnail: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+};
 
 export default MovieList;
