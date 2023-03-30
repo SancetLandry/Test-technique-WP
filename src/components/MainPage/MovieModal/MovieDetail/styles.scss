@@ -1,0 +1,88 @@
+.MovieDetail {
+
+  &__cover {
+    width: 100vw;
+    height: 27vh;
+    position: absolute;
+    left: 0;
+    z-index: 1;
+  }
+
+  &__thumbnail {
+    width: 25%;
+    max-width: 100px;
+    height: auto;
+    position: absolute;
+    z-index: 2;
+    top: 43vh;
+    left: 20%;
+    transform: translate(-50%, -50%);
+    border-radius: 10px;
+  }
+
+  &__h1 {
+    color: white;
+    font-family: "Montserrat", sans-serif;
+    font-weight: bold;
+    font-size: 1em;
+    margin-top: 28vh;
+    margin-left: 27vw;
+    line-height: 1.5em;
+    z-index: 2;
+  }
+
+  &__container {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    gap: 0.5em;
+    margin-top: 2.3em;
+    z-index: 2;
+
+    &__children {
+      display: flex;
+      flex-direction: row;
+      gap: 0.3em;
+
+      &__icon {
+        width: 0.7em;
+        height: auto;
+      }
+    
+      &__iconText {
+        color: rgb(172, 172, 172);
+        font-family: "Montserrat", sans-serif;
+        font-size: 0.6em;
+      }
+    }
+  }
+
+  &__aboutcontainer {
+    display: flex;
+    flex-direction: column;
+    gap: 1em;
+    
+
+    &__h2 {
+      color: white;
+      margin-top: 6vh;
+      font-weight: 500;
+      font-size: 0.8em;
+    }
+
+    &__p {
+      color: white;
+      font-size: 0.6em;
+      line-height: 1.5em;
+    }
+
+    &__line {
+      width: 26vw;
+      height: 0.2em;
+      border-radius: 1em;
+      background-color: rgba(172, 172, 172, 0.123);
+      margin-top: -0.5em;
+    }
+
+  }
+}

@@ -5,11 +5,23 @@ import dateImg from './date.png';
 import typeImg from './type.png';
 import durationImg from './duration.png';
 
-function IfResult({ filteredMovies }) {
+function IfResult({
+  filteredMovies, setIsMovieModalOpen, movies, setMovieSelected,
+}) {
+  function handleModale(event) {
+    const movieItem = event.currentTarget;
+    const movieImg = movieItem.querySelector('img');
+    const movieSelectedSrc = movieImg.src;
+
+    const movieFound = movies.find((movie) => movie.thumbnail === movieSelectedSrc);
+    setMovieSelected(movieFound);
+    setIsMovieModalOpen(true);
+  }
+
   return (
     <div className="ifResult">
       {filteredMovies.map((element) => (
-        <div key={element.id} className="ifResult__container">
+        <div key={element.title} className="ifResult__container" onClick={handleModale}>
           <img className="ifResult__thumbnail" src={element.thumbnail} alt="" />
           <div className="ifResult__rightText">
             <h1 className="ifResult__rightText__h1">{element.title}</h1>
@@ -35,9 +47,26 @@ function IfResult({ filteredMovies }) {
 }
 
 IfResult.propTypes = {
+  filteredMovies: PropTypes.arrayOf(
+    PropTypes.shape({
+      thumbnail: PropTypes.string.isRequired,
+      title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      duration: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
+  setMovieSelected: PropTypes.func.isRequired,
+  setIsMovieModalOpen: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(
     PropTypes.shape({
+      cover: PropTypes.string.isRequired,
+      thumbnail: PropTypes.string.isRequired,
       title: PropTypes.string.isRequired,
+      date: PropTypes.string.isRequired,
+      duration: PropTypes.string.isRequired,
+      type: PropTypes.string.isRequired,
+      description: PropTypes.string.isRequired,
     }),
   ).isRequired,
 };

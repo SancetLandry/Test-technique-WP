@@ -2,9 +2,7 @@ import { useEffect, useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
 
-function MovieGrid(props) {
-  const { movies } = props;
-
+function MovieGrid({ movies, setIsMovieModalOpen, setMovieSelected }) {
   // We sort the movies by year
   const sortedMovies = movies.sort((a, b) => b.year - a.year);
 
@@ -17,14 +15,19 @@ function MovieGrid(props) {
         <ValidThumbnail
           key={`Movie ${index + 1}`}
           movie={movie}
+          movies={movies}
           index={index}
+          setIsMovieModalOpen={setIsMovieModalOpen}
+          setMovieSelected={setMovieSelected}
         />
       ))}
     </div>
   );
 }
 
-function ValidThumbnail({ movie, index }) {
+function ValidThumbnail({
+  movie, movies, index, setIsMovieModalOpen, setMovieSelected,
+}) {
   const [validImage, setValidImage] = useState(false);
 
   useEffect(() => {
@@ -42,9 +45,16 @@ function ValidThumbnail({ movie, index }) {
     return null;
   }
 
+  function handleModale(event) {
+    const movieSelected = event.target.src;
+    const movieFound = movies.find((moviess) => moviess.thumbnail === movieSelected);
+    setMovieSelected(movieFound);
+    setIsMovieModalOpen(true);
+  }
+
   return (
     <div className="movie-grid-item">
-      <img src={movie.thumbnail} alt={`Movie ${index + 1}`} />
+      <img src={movie.thumbnail} alt={`Movie ${index + 1}`} onClick={handleModale} />
     </div>
   );
 }
@@ -55,6 +65,8 @@ MovieGrid.propTypes = {
       thumbnail: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  setIsMovieModalOpen: PropTypes.func.isRequired,
+  setMovieSelected: PropTypes.func.isRequired,
 };
 
 ValidThumbnail.propTypes = {
@@ -62,6 +74,13 @@ ValidThumbnail.propTypes = {
     thumbnail: PropTypes.string.isRequired,
   }).isRequired,
   index: PropTypes.number.isRequired,
+  setIsMovieModalOpen: PropTypes.func.isRequired,
+  setMovieSelected: PropTypes.func.isRequired,
+  movies: PropTypes.arrayOf(
+    PropTypes.shape({
+      thumbnail: PropTypes.string.isRequired,
+    }),
+  ).isRequired,
 };
 
 export default MovieGrid;

@@ -8,7 +8,9 @@ import IfNoTyping from './IfNoTyping';
 import IfNoResult from './IfNoResult';
 import IfResult from './IfResult';
 
-function SearchModale({ setIsSearchModalOpen, movies }) {
+function SearchModale({
+  setIsSearchModalOpen, setIsMovieModalOpen, movies, setMovieSelected,
+}) {
   const [searchTerm, setSearchTerm] = React.useState('');
   const [searchState, setSearchState] = React.useState('noTyping');
 
@@ -61,7 +63,7 @@ function SearchModale({ setIsSearchModalOpen, movies }) {
       </div>
       {searchState === 'noTyping' && <IfNoTyping />}
       {searchState === 'noResult' && <IfNoResult />}
-      {searchState === 'result' && <IfResult filteredMovies={filteredMovies} />}
+      {searchState === 'result' && <IfResult filteredMovies={filteredMovies} setIsMovieModalOpen={setIsMovieModalOpen} setMovieSelected={setMovieSelected} movies={movies} />}
     </div>
   );
 }
@@ -73,6 +75,8 @@ SearchModale.propTypes = {
       title: PropTypes.string.isRequired,
     }),
   ).isRequired,
+  setIsMovieModalOpen: PropTypes.func.isRequired,
+  setMovieSelected: PropTypes.func.isRequired,
 };
 
 export default SearchModale;
