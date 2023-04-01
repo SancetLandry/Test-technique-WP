@@ -29,9 +29,8 @@ function App() {
   useEffect(() => {
     const fetchData = async () => {
       try {
-        const proxyUrl = 'https://cors-anywhere.herokuapp.com/';
         const apiUrl = 'https://europe-west1-movie-api-recruitment.cloudfunctions.net/movies';
-        const response = await axios.get(proxyUrl + apiUrl);
+        const response = await axios.get(apiUrl);
         setMovies(response.data);
         console.log(response.data);
       }
