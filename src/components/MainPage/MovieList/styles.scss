@@ -41,3 +41,41 @@
   -1px 0.5px 0 #0296e5a1, 
   0.5px 0.5px 0 #0296e5a1;
 }
+
+
+// Media Queries
+
+@media (min-width: 375px) { // Starting at 375px
+  .movie-list-container {
+    height: 33vh;
+  }
+}
+
+@media (min-width: 425px) { // Starting at 375px
+  .movie-list-container {
+    height: 30vh;
+  }
+  .movie-item {
+    margin-right: 1.3em;
+  }
+
+  @media (min-width: 768px) { // Starting at 768px
+    .movie-list-container {
+      height: 35vh;
+    }
+    .movie-item {
+      margin-right: 1.5em;
+    }
+
+    .movie-item {
+      width: 7em;
+      height: auto;
+    }
+
+    .movie-item img {
+      width: 7em; 
+      height: auto;
+      border-radius: 1em;
+    }
+  }
+}

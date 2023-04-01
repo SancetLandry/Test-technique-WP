@@ -57,3 +57,47 @@
 
 
 
+// Media Queries
+
+@media (min-width: 425px) { // Starting at 425px
+  .ifResult__thumbnail {
+    width: 5em;
+    height: auto;
+    border-radius: 1em;
+  }
+
+  .ifResult__rightText {
+    padding-top: 1.2em;
+    gap: 1.3em;
+  }
+}
+
+@media (min-width: 768px) { // Starting at 768px
+  .ifResult__thumbnail {
+    width: 7em;
+    height: auto;
+    border-radius: 1em;
+  }
+
+  .ifResult__rightText {
+    padding-top: 2em;
+    gap: 1.3em;
+  }
+
+  .ifResult__rightText__h1 {
+    font-size: 0.9em;
+    color: white;
+    line-height: 1.3em;
+  }
+
+  .ifResult__rightText__icon {
+    width: 0.8em;
+    height: auto;
+  }
+
+  .ifResult__rightText__p {
+    font-size: 0.7em;
+    color: white;
+  }
+}
+
