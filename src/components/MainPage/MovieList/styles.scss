@@ -4,7 +4,8 @@
   white-space: nowrap;
   padding: 0em 1em 0em 1em;
   width: auto;
-  height: 44vh;
+  height: fit-content;
+  padding-bottom: 2em;
 }
 
 .movie-list {
@@ -46,23 +47,17 @@
 // Media Queries
 
 @media (min-width: 375px) { // Starting at 375px
-  .movie-list-container {
-    height: 33vh;
-  }
+  
 }
 
 @media (min-width: 425px) { // Starting at 375px
-  .movie-list-container {
-    height: 30vh;
-  }
+  
   .movie-item {
     margin-right: 1.3em;
   }
 
   @media (min-width: 768px) { // Starting at 768px
-    .movie-list-container {
-      height: 35vh;
-    }
+    
     .movie-item {
       margin-right: 1.5em;
     }

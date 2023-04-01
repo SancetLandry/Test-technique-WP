@@ -7,14 +7,15 @@
     left: 0;
     z-index: 1;
   }
+  
 
   &__thumbnail {
     width: 25%;
-    max-width: 100px;
+    max-width: 300px;
     height: auto;
     position: absolute;
     z-index: 2;
-    top: 43vh;
+    top: 43%;
     left: 20%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
@@ -25,7 +26,7 @@
     font-family: "Montserrat", sans-serif;
     font-weight: bold;
     font-size: 1em;
-    margin-top: 28vh;
+    margin-top: 29vh;
     margin-left: 27vw;
     line-height: 1.5em;
     z-index: 2;
@@ -36,7 +37,7 @@
     flex-direction: row;
     justify-content: center;
     gap: 0.5em;
-    margin-top: 2.3em;
+    margin-top: 3em;
     z-index: 2;
 
     &__children {
@@ -90,6 +91,17 @@
 
 // Media Queries
 
+@media (min-width: 375px) { // Starting at 375px
+  .MovieDetail__container {
+    margin-top: 5em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 28vh;
+  }
+
+}
+
 @media (min-width: 395px) { // Starting at 395px
   .MovieDetail__container {
     margin-top: 3.5em;
@@ -121,7 +133,6 @@
     height: auto;
     position: absolute;
     z-index: 2;
-    top: 53vh;
     left: 20%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
@@ -132,7 +143,7 @@
   }
 }
 
-@media (min-width: 419px) { // Starting at 395px
+@media (min-width: 419px) { // Starting at 419px
   .MovieDetail__container {
     margin-top: 5em;
   }
@@ -158,9 +169,48 @@
     height: auto;
     position: absolute;
     z-index: 2;
-    top: 53vh;
     left: 20%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
+  }
+}
+
+
+
+@media (min-height: 568px) { // Starting at 568px
+  .MovieDetail__thumbnail {
+    top: 43%;
+  }
+}
+
+@media (min-height: 740px) { // Starting at 740px
+  .MovieDetail__container {
+    margin-top: 5em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 28vh;
+  }
+}
+
+@media (min-height: 745px) { // Starting at 745px
+  .MovieDetail__thumbnail {
+    top: 40%;
+  }
+}
+
+@media (min-height: 845px) { // Starting at 845px
+  .MovieDetail__thumbnail {
+    top: 38%;
+  }
+}
+
+@media (min-height: 915px) { // Starting at 915px
+  .MovieDetail__container {
+    margin-top: 9em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 24vh;
   }
 }
