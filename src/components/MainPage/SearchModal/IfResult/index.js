@@ -31,28 +31,30 @@ function IfResult({
     // when the user click on a movie.
     // We use the map method to display the movies filtered
     <div className="ifResult">
-      {filteredMovies.map((element) => (
-        <div key={element.title} className="ifResult__container" onClick={handleModale}>
-          <img className="ifResult__thumbnail" src={element.thumbnail} alt="" />
-          <div className="ifResult__rightText">
-            <h1 className="ifResult__rightText__h1">{element.title}</h1>
-            <div className="ifResult__rightText__iconText__container">
-              <div className="ifResult__rightText__iconText">
-                <img className="ifResult__rightText__icon" src={dateImg} alt="date icon" />
-                <p className="ifResult__rightText__p">{element.date}</p>
-              </div>
-              <div className="ifResult__rightText__iconText">
-                <img className="ifResult__rightText__icon" src={typeImg} alt="type icon" />
-                <p className="ifResult__rightText__p">{element.type}</p>
-              </div>
-              <div className="ifResult__rightText__iconText">
-                <img className="ifResult__rightText__icon" src={durationImg} alt="duration icon" />
-                <p className="ifResult__rightText__p">{element.duration} minutes</p>
+      {filteredMovies
+        .sort((a, b) => a.title.localeCompare(b.title))
+        .map((element) => (
+          <div key={element.title} className="ifResult__container" onClick={handleModale}>
+            <img className="ifResult__thumbnail" src={element.thumbnail} alt="" />
+            <div className="ifResult__rightText">
+              <h1 className="ifResult__rightText__h1">{element.title}</h1>
+              <div className="ifResult__rightText__iconText__container">
+                <div className="ifResult__rightText__iconText">
+                  <img className="ifResult__rightText__icon" src={dateImg} alt="date icon" />
+                  <p className="ifResult__rightText__p">{element.date}</p>
+                </div>
+                <div className="ifResult__rightText__iconText">
+                  <img className="ifResult__rightText__icon" src={typeImg} alt="type icon" />
+                  <p className="ifResult__rightText__p">{element.type}</p>
+                </div>
+                <div className="ifResult__rightText__iconText">
+                  <img className="ifResult__rightText__icon" src={durationImg} alt="duration icon" />
+                  <p className="ifResult__rightText__p">{element.duration} minutes</p>
+                </div>
               </div>
             </div>
           </div>
-        </div>
-      ))}
+        ))}
     </div>
   );
 }
