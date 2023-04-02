@@ -38,7 +38,7 @@
     font-size: 3.5vw;
     margin-top: 29vh;
     line-height: 1.5em;
-    left: calc(38vw - 5%);
+    left: calc(75vw - 50%);
     position: relative;
     z-index: 2;
   }
@@ -103,8 +103,9 @@
 
 // Media Queries
 
-@media (max-width: 320px) { // Starting at 320px
-.MovieDetail__h1 {
-  left: calc(44vw - 5%);
-}
-}
+ @media (max-width: 320px) { // Starting at 320px
+ .MovieDetail__h1 {
+   left: calc(79vw - 50%);
+   width: 40vw;
+ }
+ }
