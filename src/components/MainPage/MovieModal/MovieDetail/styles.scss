@@ -15,7 +15,7 @@
     height: auto;
     position: absolute;
     z-index: 2;
-    top: 43%;
+    top: 36%;
     left: 20%;
     transform: translate(-50%, -50%);
     border-radius: 10px;
@@ -179,7 +179,7 @@
 
 @media (min-height: 568px) { // Starting at 568px
   .MovieDetail__thumbnail {
-    top: 43%;
+    top: 36%;
   }
 }
 
@@ -193,15 +193,15 @@
   }
 }
 
-@media (min-height: 745px) { // Starting at 745px
+@media (min-height: 740px) { // Starting at 745px
   .MovieDetail__thumbnail {
-    top: 40%;
+    top: 34%;
   }
 }
 
 @media (min-height: 845px) { // Starting at 845px
   .MovieDetail__thumbnail {
-    top: 38%;
+    top: 33%;
   }
 }
 
