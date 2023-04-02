@@ -48,12 +48,12 @@ Pour cet exercice j'ai fait les choix techniques suivants :
 
 |Techno| Justification |
 |--|--|
-| React | Pour sa gestion par composants, sa simplicité dans le fait de pouvoir changer la palce de certains composants, de pouvoir tout ranger facilment mais aussi pour sa performance / réactivité. |
+| React | Pour sa gestion par composants, sa simplicité dans le fait de pouvoir changer la place de certains composants, de pouvoir tout ranger facilement mais aussi pour sa performance / réactivité. |
 |Axios| Facile à utiliser et à intégrer dans les projets React. Il offre une syntaxe simple et claire pour effectuer des requêtes HTTP, notamment GET, POST, PUT, DELETE, etc.|
 | PropTypes | Documentez clairement quelles props sont attendues et quel type de données elles doivent contenir. Cela permet à d'autres développeurs de comprendre le code rapidement. |
 | Babel | Permet d'utiliser les dernières fonctionnalités du langage JavaScript (ES6, ES7, etc.) tout en maintenant la compatibilité avec les navigateurs plus anciens. |
 | Webpack | Il prend en charge l'importation de différents types de fichiers (JavaScript, CSS, images, etc.) et génère un ensemble de fichiers optimisés pour la production. |
-| ESLint | Il aide à améliorer la qualité du code et à suivre les meilleures pratiques en développement. Détecter et corriger les erreurs. |
+| ESLint | Il aide à améliorer la qualité du code et à suivre les meilleures pratiques en développement. Me permet de detecter et corriger les erreurs syntaxiques. |
 | SASS | Cela permet de pouvoir mieux organiser mon CSS et pouvoir ranger le code en cascade. |
 | Framework CSS | Je n'ai utilisé aucun framework CSS dans cet exercice pour deux raisons, montrer que je suis capable de reproduire la maquette sans aide supplémentaire et pour avoir un rendu très fidèle. |
 
@@ -70,11 +70,11 @@ Pour cet exercice j'ai fait les choix techniques suivants :
 ## Problèmes / solutions trouvés 
 | Problèmes | Solutions |
 |--|--|
-| Problème de CORS avec l'API | Je n'avais pas accès par mon localhost à faire des appels API car cette url ne devait pas être dans la liste des url autorisés par le serveur, j'ai du passer par un proxy pour faire mes requettes HTTP.  |
+| Problème de CORS avec l'API | Je n'avais pas accès par mon localhost à faire des appels API car cette url ne devait pas être dans la liste des url autorisés par le serveur, j'ai du passer par un proxy pour faire mes requêtes HTTP.  |
 | Thumbnail manquantes  | Certaines étaient manquantes et retournaient une erreur 404 au moment de les recupérer, j'ai du mettre en place une verification pour que si pas de thumbnail, le film ne s'affiche pas dans les différents composants, car sans image, ce n'était pas très user friendly. |
 | Cover manquantes  | Même problème que pour les thumbnails.  |
 | Différentes tailles des thumbnail |       J'ai du trouver des manières de les resize en gardant les ratio/proportions et qu'elles soient au final toutes de la même taille avec quelques règles CSS.|
-| La gestion de l'appui sur la touche retour du mobile / de la tablette | Je n'avais aucune idée de comment gerer cela pour que la page ne se ferme pas, par manque de temps je n'ai pas pu l'implémenter mais il serait tout à fait possible de le mettre en place grâce à react-navigation et react-native-backhandler par exemple. |
+| La gestion de l'appui sur la touche retour du mobile / de la tablette | Je n'avais aucune idée de comment gérer cela pour que la page ne se ferme pas, par manque de temps je n'ai pas pu l'implémenter mais il serait tout à fait possible de le mettre en place grâce à react-navigation et react-native-backhandler par exemple. |
 
 ## Auto-évaluation
 
