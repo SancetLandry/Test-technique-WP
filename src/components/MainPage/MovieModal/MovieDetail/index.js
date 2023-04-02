@@ -17,12 +17,13 @@ function MovieDetail({ movieSelected }) {
     // We display the movie selected
     <div className="MovieDetail">
 
-      <div className="contain1">
+      <div className="MovieDetail__contain1">
         <img className="MovieDetail__cover" src={movieSelected.cover} alt="cover" />
-        <img className="MovieDetail__thumbnail" src={movieSelected.thumbnail} alt="thumbnail" />
+
       </div>
 
-      <div className="contain2">
+      <div className="MovieDetail__contain2">
+        <img className="MovieDetail__thumbnail" src={movieSelected.thumbnail} alt="thumbnail" />
         <h1 className="MovieDetail__h1">{movieSelected.title}</h1>
       </div>
 
@@ -30,7 +31,7 @@ function MovieDetail({ movieSelected }) {
         <div className="MovieDetail__container__children">
           <img className="MovieDetail__container__children__icon" src={date} alt="" />
           <p className="MovieDetail__container__children__iconText"> {movieSelected.date}</p>
-          <p className="MovieDetail__container__children__iconText">|</p>
+          <p className="MovieDetail__container__children__iconText"> |</p>
         </div>
 
         <div className="MovieDetail__container__children">
