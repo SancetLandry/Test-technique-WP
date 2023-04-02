@@ -101,6 +101,10 @@
 }
 
 
-// // Media Queries
+// Media Queries
 
-// // @media (min-width: 375px) { // Starting at 375px
+@media (max-width: 320px) { // Starting at 320px
+.MovieDetail__h1 {
+  left: calc(44vw - 5%);
+}
+}
