@@ -3,6 +3,7 @@ import searchImg from './search.png';
 
 function IfNoTyping() {
   return (
+    // We use the IfNoResult component to display the message "No result"
     <div className="IfNoTyping">
       <img className="IfNoTyping__img" src={searchImg} alt="search img png" />
       <h1 className="IfNoTyping__h1">We Are Sorry, We Can <br /> Not Find The Movie :|</h1>

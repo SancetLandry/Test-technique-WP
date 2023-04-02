@@ -8,7 +8,7 @@ import MainPage from 'src/components/MainPage';
 // == Component
 function App() {
   // We use the useState hook to manage the display of the start screen.
-  // We set a timer of 3 seconds thanks to the useEffect then we display
+  // We set a timer of 2 seconds thanks to the useEffect then we display
   // the rest of the application so here, the homepage.
   const [showSplashScreen, setShowSplashScreen] = useState(true);
 
@@ -43,6 +43,8 @@ function App() {
   }, []);
 
   return (
+    // We display the start screen if the state is true
+    // otherwise we display the rest of the application.
     <div className="App">
       {showSplashScreen && <SplashScreen />}
       <MainPage movies={movies} />

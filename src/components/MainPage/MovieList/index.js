@@ -1,4 +1,4 @@
-// MovieList.js
+// == Import ==
 import './styles.scss';
 import PropTypes from 'prop-types';
 
@@ -9,6 +9,10 @@ function MovieList({ movies, setIsMovieModalOpen, setMovieSelected }) {
   // We slice the array to get the 4 most recent movies
   const recentMovies = sortedMovies.slice(0, 4);
 
+  // We use the handleModale function to open the modal
+  // and to display the movie selected.
+  // We use the find method to find the movie selected
+  // and we pass it to the setMovieSelected function.
   function handleModale(event) {
     const movieSelected = event.target.src;
     const movieFound = movies.find((movie) => movie.thumbnail === movieSelected);
@@ -17,6 +21,7 @@ function MovieList({ movies, setIsMovieModalOpen, setMovieSelected }) {
   }
 
   return (
+    // We display the 4 most recent movies
     <div className="movie-list-container">
       <ul className="movie-list">
         {recentMovies.map((movie, index) => (
@@ -30,6 +35,7 @@ function MovieList({ movies, setIsMovieModalOpen, setMovieSelected }) {
   );
 }
 
+// == PropTypes ==
 MovieList.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({

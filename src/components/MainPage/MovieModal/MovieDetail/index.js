@@ -1,3 +1,4 @@
+// == Import ==
 import './styles.scss';
 
 import PropTypes from 'prop-types';
@@ -6,11 +7,14 @@ import date from './date.png';
 import duration from './duration.png';
 
 function MovieDetail({ movieSelected }) {
+  // We use the conditional rendering to display the movie selected
+  // when the movieSelected is not null.
   if (!movieSelected) {
     return <div>Loading...</div>;
   }
 
   return (
+    // We display the movie selected
     <div className="MovieDetail">
 
       <img className="MovieDetail__cover" src={movieSelected.cover} alt="cover" />
@@ -47,6 +51,7 @@ function MovieDetail({ movieSelected }) {
   );
 }
 
+// == PropTypes ==
 MovieDetail.propTypes = {
   movieSelected: PropTypes.shape({
     cover: PropTypes.string.isRequired,

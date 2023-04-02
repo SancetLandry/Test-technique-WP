@@ -1,3 +1,4 @@
+// == Import ==
 import './styles.scss';
 import PropTypes from 'prop-types';
 
@@ -8,6 +9,12 @@ import durationImg from './duration.png';
 function IfResult({
   filteredMovies, setIsMovieModalOpen, movies, setMovieSelected,
 }) {
+  // We use the handleModale function to open the modal
+  // and to display the movie selected.
+  // We use the find method to find the movie selected
+  // and we pass it to the setMovieSelected function.
+  // We use the event.currentTarget to get the movie selected
+  // because the event.target is the image.
   function handleModale(event) {
     const movieItem = event.currentTarget;
     const movieImg = movieItem.querySelector('img');
@@ -19,6 +26,10 @@ function IfResult({
   }
 
   return (
+    // We display the movies filtered
+    // We use the handleModale function to open the modal
+    // when the user click on a movie.
+    // We use the map method to display the movies filtered
     <div className="ifResult">
       {filteredMovies.map((element) => (
         <div key={element.title} className="ifResult__container" onClick={handleModale}>
@@ -46,6 +57,7 @@ function IfResult({
   );
 }
 
+// == PropTypes ==
 IfResult.propTypes = {
   filteredMovies: PropTypes.arrayOf(
     PropTypes.shape({

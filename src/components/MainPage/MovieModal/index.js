@@ -1,3 +1,4 @@
+// == Import ==
 import './styles.scss';
 import PropTypes from 'prop-types';
 import MovieDetail from 'src/components/MainPage/MovieModal/MovieDetail';
@@ -5,11 +6,14 @@ import MovieDetail from 'src/components/MainPage/MovieModal/MovieDetail';
 import comeback from './comeback.png';
 
 function MovieModale({ setIsMovieModalOpen, movieSelected }) {
+  // We use the handleClick function to close the modal
   const handleClick = () => {
     setIsMovieModalOpen(false);
   };
 
   return (
+    // We use the handleClick function to close the modal
+    // when the user click on the comeback button.
     <div className="movie-modale">
       <div className="movie-modale__header">
         <button
@@ -26,6 +30,7 @@ function MovieModale({ setIsMovieModalOpen, movieSelected }) {
   );
 }
 
+// == PropTypes ==
 MovieModale.propTypes = {
   setIsMovieModalOpen: PropTypes.func.isRequired,
   movieSelected: PropTypes.shape({

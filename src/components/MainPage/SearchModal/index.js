@@ -1,3 +1,4 @@
+// == Import ==
 import './styles.scss';
 import React from 'react';
 import { FaSearch } from 'react-icons/fa';
@@ -14,6 +15,7 @@ function SearchModale({
   const [searchTerm, setSearchTerm] = React.useState('');
   const [searchState, setSearchState] = React.useState('noTyping');
 
+  // We use the searchMovies function to filter the movies
   const searchMovies = (
     smovies,
     term,
@@ -21,6 +23,10 @@ function SearchModale({
 
   const filteredMovies = searchMovies(movies, searchTerm);
 
+  // We use the handleSearch function to check if the user is typing or not.
+  // If the user is typing, we display the result.
+  // If the user is not typing, we display the message "No typing".
+  // If the user is typing but there is no result, we display the message "No result".
   const handleSearch = (event) => {
     setSearchTerm(event.target.value);
 
@@ -40,6 +46,8 @@ function SearchModale({
   };
 
   return (
+    // We use the handleClick function to close the modal
+    // when the user click on the comeback button.
     <div className="search-modale">
       <div className="search-modale__header">
         <button
@@ -68,6 +76,7 @@ function SearchModale({
   );
 }
 
+// == PropTypes ==
 SearchModale.propTypes = {
   setIsSearchModalOpen: PropTypes.func.isRequired,
   movies: PropTypes.arrayOf(

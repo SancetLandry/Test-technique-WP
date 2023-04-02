@@ -1,3 +1,4 @@
+// == Import ==
 import { useEffect, useState } from 'react';
 import './styles.scss';
 import PropTypes from 'prop-types';
@@ -10,6 +11,9 @@ function MovieGrid({ movies, setIsMovieModalOpen, setMovieSelected }) {
   const otherMovies = sortedMovies.slice(4);
 
   return (
+    // We pass the other movies to the ValidThumbnail component
+    // to check if the image is valid or not.
+    // If the image is not valid, we don't display it.
     <div className="movie-grid-container">
       {otherMovies.map((movie, index) => (
         <ValidThumbnail
@@ -30,6 +34,11 @@ function ValidThumbnail({
 }) {
   const [validImage, setValidImage] = useState(false);
 
+  // We use the useEffect hook to check if the image is valid or not.
+  // If the image is valid, we set the state to true.
+  // If the image is not valid, we set the state to false.
+  // If the state is false, we don't display the image.
+
   useEffect(() => {
     const img = new Image();
     img.onload = () => {
@@ -45,6 +54,8 @@ function ValidThumbnail({
     return null;
   }
 
+  // We use the handleModale function to open the modal
+  // and to display the movie selected.
   function handleModale(event) {
     const movieSelected = event.target.src;
     const movieFound = movies.find((moviess) => moviess.thumbnail === movieSelected);
@@ -59,6 +70,7 @@ function ValidThumbnail({
   );
 }
 
+// == PropTypes ==
 MovieGrid.propTypes = {
   movies: PropTypes.arrayOf(
     PropTypes.shape({
