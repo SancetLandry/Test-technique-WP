@@ -201,7 +201,7 @@
 
 @media (min-height: 845px) { // Starting at 845px
   .MovieDetail__thumbnail {
-    top: 33%;
+    top: 31%;
   }
 }
 
@@ -212,5 +212,57 @@
 
   .MovieDetail__h1 {
     margin-top: 24vh;
+  }
+
+  .MovieDetail__thumbnail {
+    top: 28%;
+  }
+}
+
+@media (min-height: 1050px) { // Starting at 1050px
+  .MovieDetail__container {
+    margin-top: 7em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 21vh;
+    margin-left: 27vw;
+    font-size: 1.5em;
+  }
+
+  .MovieDetail__thumbnail {
+    top: 24%;
+  }
+}
+
+@media (min-height: 1200px) { // Starting at 1050px
+  .MovieDetail__container {
+    margin-top: 7em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 19vh;
+    margin-left: 27vw;
+    font-size: 1.5em;
+  }
+
+  .MovieDetail__thumbnail {
+    top: 22%;
+  }
+}
+
+@media (min-height: 1350px) { // Starting at 1350px
+  .MovieDetail__container {
+    margin-top: 7em;
+  }
+
+  .MovieDetail__h1 {
+    margin-top: 17vh;
+    margin-left: 27vw;
+    font-size: 1.5em;
+  }
+
+  .MovieDetail__thumbnail {
+    top: 20%;
   }
 }
