@@ -17,10 +17,14 @@ function MovieDetail({ movieSelected }) {
     // We display the movie selected
     <div className="MovieDetail">
 
-      <img className="MovieDetail__cover" src={movieSelected.cover} alt="cover" />
-      <img className="MovieDetail__thumbnail" src={movieSelected.thumbnail} alt="thumbnail" />
+      <div className="contain1">
+        <img className="MovieDetail__cover" src={movieSelected.cover} alt="cover" />
+        <img className="MovieDetail__thumbnail" src={movieSelected.thumbnail} alt="thumbnail" />
+      </div>
 
-      <h1 className="MovieDetail__h1">{movieSelected.title}</h1>
+      <div className="contain2">
+        <h1 className="MovieDetail__h1">{movieSelected.title}</h1>
+      </div>
 
       <div className="MovieDetail__container">
         <div className="MovieDetail__container__children">
