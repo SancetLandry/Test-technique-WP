@@ -75,3 +75,6 @@ Pour cet exercice j'ai fait les choix techniques suivants :
 | Cover manquantes  | Même problème que pour les thumbnails.  |
 | Différentes tailles des thumbnail |       J'ai du trouver des manières de les resize en gardant les ratio/proportions et qu'elles soient au final toutes de la même taille avec quelques règles CSS.|
 
+## Auto-évaluation
+
+Produit plutôt fidèle à la maquette figma et fluide. L'architecture / organisation de l'app est assez claire et plutôt logique. Quelques progès à faire sur le responsive, revoir quelques notions qui pourrait me faire progresser assez vite. La documentation du readme est claire et bien mise en forme. 
