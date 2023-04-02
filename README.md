@@ -78,4 +78,4 @@ Pour cet exercice j'ai fait les choix techniques suivants :
 
 ## Auto-évaluation
 
-Produit plutôt fidèle à la maquette figma et fluide. L'architecture / organisation de l'app est assez claire et plutôt logique. Quelques progrès à faire sur le responsive, revoir quelques notions qui pourrait me faire progresser assez vite. La documentation du readme est claire et bien mise en forme. 
+Produit plutôt fidèle à la maquette figma et fluide. L'architecture / organisation de l'app est assez claire et plutôt logique. Quelques progrès à faire sur le responsive, revoir quelques notions qui pourraient me faire progresser assez vite. Quelque imperfection qui pourraient être retravaillés autour duquel nous pourrons échanger. La documentation du readme est claire et bien mise en forme.
