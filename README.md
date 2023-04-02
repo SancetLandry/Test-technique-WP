@@ -3,7 +3,7 @@
 
 Cet exercice consiste à implémenter une **application web** qui affiche une liste de films d’après la **maquette Figma** fournie et une **API Endpoint** fournie.
 
-**Lien vers l'application :** https://test-technique-wp.netlify.app/ (copier coller sans www.)
+**Lien vers l'application :** https://test-technique-wp.netlify.app/
 
 ## Instructions de ce test  [📜](https://emojipedia.org/scroll/)
 
