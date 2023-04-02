@@ -31,15 +31,15 @@ Cet exercice consiste à implémenter une **application web** qui affiche une li
  1. Cloner le repository à l'endroit au choix sur votre machine. 
  2. Se rendre à la racine du repo cloné et effectuer dans le terminal : 
 
-    ==YARN INSTALL==
+`YARN INSTALL`
 
  3. Puis pour lancer le projet faire : 
 
-    ==YARN START==
+`YARN START`
 
  4. Et enfin lancer dans un navigateur à l'adresse : 
 
-   ==http://localhost:8080/==
+`http://localhost:8080/`
 
 
 ## Choix techniques [🛠️](https://emojipedia.org/hammer-and-wrench/)
